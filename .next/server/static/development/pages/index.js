@@ -93,6 +93,164 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Head/index.js":
+/*!**********************************!*\
+  !*** ./components/Head/index.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/janradl/Devel/nalavicce.cz/components/Head/index.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* harmony default export */ __webpack_exports__["default"] = (() => __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 3
+  },
+  __self: undefined
+}, __jsx("meta", {
+  name: "viewport",
+  content: "width=device-width, initial-scale=1",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 4
+  },
+  __self: undefined
+}), __jsx("meta", {
+  charSet: "utf-8",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5
+  },
+  __self: undefined
+}), __jsx("title", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, "Lavi\u010Dka"), __jsx("meta", {
+  name: "description",
+  content: "Test",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}), __jsx("meta", {
+  property: "og:title",
+  content: "Lavi\u010Dka",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}), __jsx("meta", {
+  property: "og:description",
+  content: "Test",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+}), __jsx("meta", {
+  property: "og:image",
+  content: "/static/og.jpg",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}), __jsx("meta", {
+  name: "apple-mobile-web-app-status-bar-style",
+  content: "default",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}), __jsx("meta", {
+  property: "og:type",
+  content: "website",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "apple-touch-icon",
+  sizes: "180x180",
+  href: "/static/favicon/apple-touch-icon.png",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "icon",
+  type: "image/png",
+  sizes: "32x32",
+  href: "/static/favicon/favicon-32x32.png",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "icon",
+  type: "image/png",
+  sizes: "16x16",
+  href: "/static/favicon/favicon-16x16.png",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 24
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "manifest",
+  href: "/static/favicon/site.webmanifest",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 30
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "mask-icon",
+  href: "/static/favicon/safari-pinned-tab.svg",
+  color: "#d55241",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 31
+  },
+  __self: undefined
+}), __jsx("meta", {
+  name: "msapplication-TileColor",
+  content: "#ffffff",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 36
+  },
+  __self: undefined
+}), __jsx("meta", {
+  name: "theme-color",
+  content: "#ffffff",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 37
+  },
+  __self: undefined
+})));
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -104,18 +262,26 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Head */ "./components/Head/index.js");
 var _jsxFileName = "/Users/janradl/Devel/nalavicce.cz/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+
 const IndexPage = () => {
-  return __jsx("h1", {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_Head__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 2
+      lineNumber: 6
     },
     __self: undefined
-  }, "Home");
+  }), __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, "Home"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);
@@ -131,6 +297,17 @@ const IndexPage = () => {
 
 module.exports = __webpack_require__(/*! /Users/janradl/Devel/nalavicce.cz/pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 
