@@ -6,6 +6,13 @@
   box-sizing: border-box;
 }
 
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   font-family: "Hind", sans-serif;
   font-weight: 600;
@@ -17,6 +24,14 @@ p {
   font-family: "Hind", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.4;
+  max-width: 60ch;
+}
+
+small {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
   line-height: 1.4;
   max-width: 60ch;
 }

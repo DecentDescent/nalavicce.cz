@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className={styles["about"]}>
       <div className={styles["container"]}>
-        <h1>O Lavičce</h1>
+        <h1>Co je Lavička?</h1>
         <p>
           Projekt Lavička je bezplatná následná psychoterapeutická služba pro
           adolescentní pacienty, kteří prošli psychiatrickou hospitalizací. Tato
