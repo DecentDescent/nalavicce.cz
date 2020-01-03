@@ -1,0 +1,36 @@
+@import "../../styles/general.scss";
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(237, 235, 235, 1) 100%
+  );
+
+  .loading__element {
+    width: 42px;
+    height: 42px;
+    animation: pulse 1.5s infinite;
+  }
+}

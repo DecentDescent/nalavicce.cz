@@ -1,0 +1,11 @@
+@import "../../styles/general.scss";
+
+section.about {
+  height: 500px;
+  padding: 64px 0;
+  background: #fafafa;
+
+  h1 {
+    color: $color-black;
+  }
+}
