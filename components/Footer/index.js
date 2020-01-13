@@ -6,7 +6,7 @@ const Footer = () => {
       <nav>
         <ul>
           <li>
-            <a href="#">O Lavičce</a>
+            <a href="#">O projektu</a>
           </li>
           <li>
             <a href="#">Jak fungujeme</a>
@@ -20,7 +20,7 @@ const Footer = () => {
         </ul>
       </nav>
       <svg viewBox="0 0 109 23">
-        <g fill="none" fill-rule="evenodd" transform="translate(.021 .01)">
+        <g fill="none" fillRule="evenodd" transform="translate(.021 .01)">
           <path
             d="m103.007 20.78c.618 1.065 1.64 1.533 2.768 1.533 1.852 0 3.194-1.341 3.194-3.194 0-.596-.149-1.149-.405-1.618l-5.387-9.368c-.553-.958-1.533-1.576-2.789-1.576s-2.235.618-2.789 1.576l-5.387 9.368c-.255.469-.404 1.022-.404 1.618 0 1.853 1.341 3.194 3.193 3.194 1.129 0 2.151-.468 2.768-1.533l.703-1.235h3.811z"
             fill="#fff"

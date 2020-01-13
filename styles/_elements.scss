@@ -10,6 +10,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -20,12 +21,60 @@ h1 {
   margin: 24px 0;
 }
 
+h2 {
+  font-family: "Hind", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  margin: 24px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-black;
+}
+
+h4 {
+  font-family: "Hind", sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+hr {
+  height: 5px;
+  width: 10%;
+  max-width: 60px;
+  border: none;
+  margin: 48px auto;
+
+  &.divider--blue {
+    background-color: $color-blue;
+  }
+
+  &.divider--yellow {
+    background-color: $color-yellow;
+  }
+
+  &.divider--red {
+    background-color: $color-red;
+  }
+}
+
 p {
   font-family: "Hind", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.4;
   max-width: 60ch;
+  margin: 0 auto;
+  color: $color-black;
+
+  &.paragraph--lead {
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 400;
+    max-width: 60ch;
+  }
 }
 
 small {
@@ -34,4 +83,9 @@ small {
   font-size: 12px;
   line-height: 1.4;
   max-width: 60ch;
+}
+
+.align--center {
+  text-align: center;
+  max-width: 80ch;
 }

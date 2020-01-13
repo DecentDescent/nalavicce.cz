@@ -12,12 +12,7 @@ class IndexPage extends Component {
     return (
       <>
         <Head />
-        <Header />
-        <Hero />
-        <About />
-        <HowItWorks />
         <Team />
-        <Contact />
         <Footer />
       </>
     );

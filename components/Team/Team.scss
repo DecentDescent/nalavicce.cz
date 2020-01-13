@@ -2,4 +2,153 @@
 
 section.team {
   padding: 64px 0;
+  background: rgba($color-red, 0.1);
+}
+
+.teammates {
+  width: 100%;
+  display: grid;
+  max-width: 960px;
+  column-gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 32px 42px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .teammate {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:nth-child(even) {
+      padding-top: 64px;
+
+      @media (max-width: 640px) {
+        padding: 32px 0;
+      }
+    }
+    &:nth-child(1) {
+      .teammate__avatar {
+        width: 142px;
+        height: 142px;
+        border-color: rgba($color-red, 0.8);
+        box-shadow: 0 0 0 0 rgba($color-red, 0.3);
+      }
+      .teammate__name {
+        color: $color-red;
+      }
+      &:hover {
+        .teammate__avatar {
+          box-shadow: 0 0 0 5px rgba($color-red, 0.3);
+        }
+      }
+    }
+    &:nth-child(2) {
+      .teammate__avatar {
+        width: 123px;
+        height: 123px;
+        border-color: rgba($color-yellow, 0.8);
+        box-shadow: 0 0 0 0 rgba($color-yellow, 0.3);
+      }
+      .teammate__name {
+        color: $color-yellow;
+      }
+
+      &:hover {
+        .teammate__avatar {
+          box-shadow: 0 0 0 5px rgba($color-yellow, 0.3);
+        }
+      }
+    }
+    &:nth-child(3) {
+      .teammate__avatar {
+        width: 128px;
+        height: 128px;
+        border-color: rgba($color-blue, 0.8);
+        box-shadow: 0 0 0 0 rgba($color-blue, 0.3);
+      }
+      .teammate__name {
+        color: $color-blue;
+      }
+      &:hover {
+        .teammate__avatar {
+          box-shadow: 0 0 0 5px rgba($color-blue, 0.3);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .teammate__avatar {
+        width: 138px;
+        height: 138px;
+        border-color: rgba($color-brown, 0.8);
+        box-shadow: 0 0 0 0 rgba($color-brown, 0.3);
+      }
+      .teammate__name {
+        color: $color-brown;
+      }
+      &:hover {
+        .teammate__avatar {
+          box-shadow: 0 0 0 5px rgba($color-brown, 0.3);
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      .teammate__avatar {
+        width: 118px;
+        height: 118px;
+        border-color: rgba($color-green, 0.8);
+        box-shadow: 0 0 0 0 rgba($color-green, 0.3);
+      }
+      .teammate__name {
+        color: $color-green;
+      }
+
+      &:hover {
+        .teammate__avatar {
+          box-shadow: 0 0 0 5px rgba($color-green, 0.3);
+        }
+      }
+    }
+
+    .teammate__avatar {
+      border-radius: 50%;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPUoIIealuMtGZOKXPMjvPWOEykDCSMoo-ajEKgA-ITk986Pjg&s);
+      background-size: cover;
+      background-position: center;
+      transition: all 0.24s;
+      border-width: 5px;
+      border-style: solid;
+      background-clip: content-box;
+
+      @media (min-width: 641px) and (max-width: 880px) {
+        width: 82px !important;
+        height: 82px !important;
+      }
+
+      @media (max-width: 640px) {
+        width: 142px !important;
+        height: 142px !important;
+      }
+    }
+
+    .teammate__name {
+      padding: 24px 0;
+      color: $color-black;
+    }
+
+    &:hover {
+      .teammate__avatar {
+        transform: scale((1.1));
+      }
+    }
+  }
 }
