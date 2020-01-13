@@ -2,16 +2,26 @@
 
 .footer {
   width: 100%;
-  background: radial-gradient(
-    circle,
-    rgba($color-red, 0.9) 0%,
-    rgba($color-red, 1) 100%
-  );
-  padding: 48px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 32px;
+  background: rgba($color-red, 0.1);
+  box-sizing: border-box;
+  border-radius: 0 0 24px 24px;
 
+  .footer__container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: radial-gradient(
+      circle,
+      rgba($color-red, 0.9) 0%,
+      rgba($color-red, 1) 100%
+    );
+    border-radius: 32px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   nav {
     padding: 16px;
     font-family: "Hind", sans-serif;

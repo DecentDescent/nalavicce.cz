@@ -3,6 +3,7 @@
 section.team {
   padding: 64px 0;
   background: rgba($color-red, 0.1);
+  border-radius: 24px 24px 0 0;
 }
 
 .teammates {
@@ -39,14 +40,17 @@ section.team {
         width: 142px;
         height: 142px;
         border-color: rgba($color-red, 0.8);
-        box-shadow: 0 0 0 0 rgba($color-red, 0.3);
+        box-shadow: 0 0 0 0 #f2bfb9;
       }
       .teammate__name {
         color: $color-red;
       }
       &:hover {
         .teammate__avatar {
-          box-shadow: 0 0 0 5px rgba($color-red, 0.3);
+          box-shadow: 0 0 0 8px #f2bfb9, 0 0 0 16px rgba(#f2bfb9, 0.3);
+        }
+        .teammate__name {
+          background-color: #f2bfb9;
         }
       }
     }
@@ -55,7 +59,7 @@ section.team {
         width: 123px;
         height: 123px;
         border-color: rgba($color-yellow, 0.8);
-        box-shadow: 0 0 0 0 rgba($color-yellow, 0.3);
+        box-shadow: 0 0 0 0 #f3d5bd;
       }
       .teammate__name {
         color: $color-yellow;
@@ -63,7 +67,10 @@ section.team {
 
       &:hover {
         .teammate__avatar {
-          box-shadow: 0 0 0 5px rgba($color-yellow, 0.3);
+          box-shadow: 0 0 0 8px #f3d5bd, 0 0 0 16px rgba(#f3d5bd, 0.3);
+        }
+        .teammate__name {
+          background-color: #f3d5bd;
         }
       }
     }
@@ -72,14 +79,17 @@ section.team {
         width: 128px;
         height: 128px;
         border-color: rgba($color-blue, 0.8);
-        box-shadow: 0 0 0 0 rgba($color-blue, 0.3);
+        box-shadow: 0 0 0 0 #d4eaeb;
       }
       .teammate__name {
         color: $color-blue;
       }
       &:hover {
         .teammate__avatar {
-          box-shadow: 0 0 0 5px rgba($color-blue, 0.3);
+          box-shadow: 0 0 0 8px #d4eaeb, 0 0 0 16px rgba(#d4eaeb, 0.3);
+        }
+        .teammate__name {
+          background-color: #d4eaeb;
         }
       }
     }
@@ -89,32 +99,42 @@ section.team {
         width: 138px;
         height: 138px;
         border-color: rgba($color-brown, 0.8);
-        box-shadow: 0 0 0 0 rgba($color-brown, 0.3);
+        box-shadow: 0 0 0 0 #ebd1b0;
       }
       .teammate__name {
         color: $color-brown;
       }
       &:hover {
         .teammate__avatar {
-          box-shadow: 0 0 0 5px rgba($color-brown, 0.3);
+          box-shadow: 0 0 0 8px #ebd1b0, 0 0 0 16px rgba(#ebd1b0, 0.3);
+        }
+        .teammate__name {
+          background-color: #ebd1b0;
         }
       }
     }
 
     &:nth-child(5) {
       .teammate__avatar {
-        width: 118px;
-        height: 118px;
+        width: 124px;
+        height: 124px;
         border-color: rgba($color-green, 0.8);
-        box-shadow: 0 0 0 0 rgba($color-green, 0.3);
+        box-shadow: 0 0 0 0 #cadcc8;
       }
       .teammate__name {
         color: $color-green;
+        margin-top: -14px;
+        @media (max-width: 640px) {
+          margin-top: -10px;
+        }
       }
 
       &:hover {
         .teammate__avatar {
-          box-shadow: 0 0 0 5px rgba($color-green, 0.3);
+          box-shadow: 0 0 0 8px #cadcc8, 0 0 0 16px rgba(#cadcc8, 0.3);
+        }
+        .teammate__name {
+          background-color: #cadcc8;
         }
       }
     }
@@ -141,8 +161,11 @@ section.team {
     }
 
     .teammate__name {
-      padding: 24px 0;
+      padding: 30px 12px 8px 12px;
+      margin-top: -10px;
       color: $color-black;
+      border-radius: 8px;
+      transition: background 0.24s;
     }
 
     &:hover {
