@@ -2,8 +2,8 @@ import styles from "./HowItWorks.scss";
 
 const HowItWorks = () => {
   return (
-    <section className={styles["how-it-works"]}>
-      <div className={styles["container"]}>
+    <section className={styles["how-it-works"]} id="jak-to-funguje">
+      <div className={(styles["container"], styles["align--center"])}>
         <h1>Proč je Lavička?</h1>
         <p>
           Psychiatrickou hospitalizaci vnímáme jako důležitou pomoc při řešení

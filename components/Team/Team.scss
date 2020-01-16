@@ -1,9 +1,11 @@
 @import "../../styles/general.scss";
 
-section.team {
+.team {
   padding: 64px 0;
+  width: 100%;
   background: rgba($color-red, 0.1);
-  border-radius: 24px 24px 0 0;
+  border-radius: 24px;
+  box-sizing: border-box;
 }
 
 .teammates {
@@ -16,7 +18,7 @@ section.team {
   box-sizing: border-box;
   margin: 0 auto;
 
-  @media (max-width: 640px) {
+  @media (max-width: 750px) {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -31,7 +33,7 @@ section.team {
     &:nth-child(even) {
       padding-top: 64px;
 
-      @media (max-width: 640px) {
+      @media (max-width: 750px) {
         padding: 32px 0;
       }
     }
@@ -124,7 +126,7 @@ section.team {
       .teammate__name {
         color: $color-green;
         margin-top: -14px;
-        @media (max-width: 640px) {
+        @media (max-width: 750px) {
           margin-top: -10px;
         }
       }
@@ -149,12 +151,12 @@ section.team {
       border-style: solid;
       background-clip: content-box;
 
-      @media (min-width: 641px) and (max-width: 880px) {
+      @media (min-width: 751px) and (max-width: 950px) {
         width: 82px !important;
         height: 82px !important;
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 750px) {
         width: 142px !important;
         height: 142px !important;
       }

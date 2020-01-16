@@ -1,13 +1,13 @@
+.body {
+  box-sizing: border-box;
+  padding: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
-  box-sizing: border-box;
-}
-
-.body {
-  border: 16px solid white;
   box-sizing: border-box;
 }
 
@@ -17,6 +17,13 @@ section {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background: $color-white;
+  border: 24px solid $color-white;
+  box-sizing: border-box;
+
+  &.auto-height {
+    min-height: auto;
+  }
 }
 
 h1 {

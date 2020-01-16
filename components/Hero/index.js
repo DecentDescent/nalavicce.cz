@@ -3,7 +3,6 @@ import styles from "./Hero.scss";
 const Hero = () => {
   return (
     <section className={styles["hero"]}>
-      <div className={styles["hero__decoration"]}></div>
       <div className={styles["hero__logo"]}>
         <svg viewBox="0 0 112 51">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

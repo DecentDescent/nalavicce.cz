@@ -1,5 +1,9 @@
 @import "../../styles/general.scss";
 
-section.how-it-works {
+.how-it-works {
   padding: 64px 0;
+  width: 100%;
+  background: rgba($color-blue, 0.1);
+  border-radius: 24px;
+  box-sizing: border-box;
 }

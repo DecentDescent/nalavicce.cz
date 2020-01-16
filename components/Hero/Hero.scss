@@ -31,22 +31,6 @@
   justify-content: center;
   z-index: 1;
 
-  .hero__decoration {
-    width: 150vw;
-    height: 60vh;
-    position: absolute;
-    top: 40vh;
-    left: -25vw;
-    background: rgba(250, 250, 250, 1);
-    border-radius: 50% 50% 0 0;
-    z-index: 2;
-
-    @media (max-width: 860px) {
-      width: 200vw;
-      left: -50vw;
-    }
-  }
-
   .hero__logo {
     width: 100%;
     max-width: 380px;

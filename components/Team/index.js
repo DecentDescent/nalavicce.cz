@@ -1,6 +1,7 @@
 import styles from "./Team.scss";
 import classnames from "classnames";
-const Team = () => {
+
+const Team = props => {
   return (
     <section className={styles["team"]}>
       <div className={styles["container"]}>

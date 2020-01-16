@@ -1,11 +1,9 @@
 @import "../../styles/general.scss";
 
 .footer {
+  padding: 64px 0;
   width: 100%;
-  padding: 32px;
-  background: rgba($color-red, 0.1);
-  box-sizing: border-box;
-  border-radius: 0 0 24px 24px;
+  background: $color-red;
 
   .footer__container {
     width: 100%;
@@ -16,7 +14,6 @@
       rgba($color-red, 0.9) 0%,
       rgba($color-red, 1) 100%
     );
-    border-radius: 32px;
     padding: 48px;
     display: flex;
     flex-direction: column;
