@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import classnames from "classnames";
 
 import Head from "../components/Head";
@@ -13,36 +13,57 @@ import Footer from "../components/Footer";
 import styles from "../styles/general.scss";
 import { loadGetInitialProps } from "next/dist/next-server/lib/utils";
 
+function useKeyboardEvent(key, callback) {
+  useEffect(() => {
+    const handler = function(event) {
+      if (event.key === key) {
+        callback();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => {
+      window.removeEventListener("keydown", handler);
+    };
+  }, []);
+}
+
 function IndexPage() {
   // Declare a new state variable, which we'll call "count"
   const [dialogState, setDialog] = useState(false);
-  const [dialogTitle, setTitle] = useState("Title");
-  const [dialogContent, setContent] = useState("Content");
+  const [dialogTitle, setTitle] = useState(undefined);
+  const [dialogContent, setContent] = useState(undefined);
+  const [dialogColor, setColor] = useState(undefined);
 
-  let dialogRenderer = function(title, content) {
-    console.log(title, content);
+  useKeyboardEvent("Escape", () => {
+    setDialog(false);
+  });
+
+  let modalToggle = function(color, title, content) {
+    setColor(color);
+    setTitle(title);
+    setContent(content);
+    console.log(dialogTitle);
+    setDialog(true);
   };
 
   return (
-    <div
-      className={classnames({
-        [styles["body"]]: true,
-        [styles["body--dialog"]]: dialogState
-      })}
-    >
+    <>
       <Head />
+      <Header />
       <Hero />
-      <HowItWorks />
-      <Team />
+      <About />
+      <HowItWorks modalToggle={modalToggle} />
+      <Team modalToggle={modalToggle} />
       <Contact />
       <Footer />
       <Dialog
-        dialogState={dialogState}
         dialogClose={() => setDialog(false)}
-        title={dialogTitle}
-        content={dialogContent}
+        dialogState={dialogState}
+        dialogTitle={dialogTitle}
+        dialogContent={dialogContent}
+        dialogColor={dialogColor}
       />
-    </div>
+    </>
   );
 }
 export default IndexPage;

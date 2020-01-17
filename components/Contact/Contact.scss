@@ -1,9 +1,44 @@
 @import "../../styles/general.scss";
 
 .contact {
-  padding: 64px 0;
   width: 100%;
   background: rgba($color-yellow, 0.1);
-  border-radius: 24px;
   box-sizing: border-box;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  padding: $gutter * 2 0;
+
+  .box__svg {
+    svg {
+      height: 64px;
+    }
+  }
+  .box__text {
+    padding-left: 24px;
+    font-size: 21px;
+    font-weight: bold;
+    color: $color-black;
+
+    a {
+      text-decoration: none;
+      color: $color-blue;
+      transition: all 0.24s;
+
+      &:hover {
+        color: rgba($color-blue, 0.8);
+      }
+    }
+  }
+}
+
+.contact-map {
+  border-radius: 50px;
+  background: $color-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
 }

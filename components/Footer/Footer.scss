@@ -1,24 +1,26 @@
 @import "../../styles/general.scss";
 
 .footer {
-  padding: 64px 0;
+  padding: 0;
   width: 100%;
-  background: $color-red;
+  background: radial-gradient(
+    circle,
+    rgba($color-red, 0.9) 0%,
+    rgba($color-red, 1) 100%
+  );
+  border-radius: 24px;
 
   .footer__container {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    background: radial-gradient(
-      circle,
-      rgba($color-red, 0.9) 0%,
-      rgba($color-red, 1) 100%
-    );
+
     padding: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   nav {
     padding: 16px;
     font-family: "Hind", sans-serif;
@@ -86,12 +88,6 @@
   svg {
     max-width: 150px;
     width: 100%;
-  }
-
-  small {
-    margin-top: 32px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin: 16px 0 42px 0;
   }
 }

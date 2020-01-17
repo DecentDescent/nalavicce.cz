@@ -1,8 +1,9 @@
 import styles from "./Footer.scss";
+import classnames from "classnames";
 
 const Footer = () => {
   return (
-    <section className={styles["auto-height"]}>
+    <section>
       <footer className={styles["footer"]}>
         <div className={styles["footer__container"]}>
           <nav>

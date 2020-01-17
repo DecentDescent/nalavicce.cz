@@ -6,13 +6,35 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba($color-red, 0.95);
+  padding: 16px;
+  box-sizing: border-box;
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 
   &.dialog--opened {
     display: flex;
+  }
+
+  &.dialog--blue {
+    background-color: rgba($color-blue, 0.95);
+  }
+
+  &.dialog--yellow {
+    background-color: rgba($color-yellow, 0.95);
+  }
+
+  &.dialog--brown {
+    background-color: rgba($color-brown, 0.95);
+  }
+
+  &.dialog--green {
+    background-color: rgba($color-green, 0.95);
+  }
+
+  &.dialog--red {
+    background-color: rgba($color-red, 0.95);
   }
 
   .dialog__box {
@@ -22,6 +44,36 @@
     height: auto;
     background: $color-white;
     border-radius: $gutter * 4;
-    padding: $gutter * 4 $gutter * 8;
+    padding: $gutter * 8 $gutter * 10;
+    position: relative;
+  }
+
+  .box__close {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    background: $color-white;
+    padding: $gutter * 4;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+
+    svg {
+      fill: $color-black;
+      transition: transform 0.24s;
+    }
+
+    &:hover {
+      svg {
+        transform: rotate(90deg);
+        fill: $color-blue;
+      }
+    }
+  }
+
+  p {
+    margin: 24px 0;
   }
 }
