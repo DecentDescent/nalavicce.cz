@@ -1,13 +1,11 @@
 import styles from "./Dialog.scss";
 import classnames from "classnames";
-
 const Dialog = props => {
-  return (
+  return props.dialogState ? (
     <div
       className={classnames({
         [styles["dialog"]]: true,
-        [styles[`dialog--${props.dialogColor}`]]: true,
-        [styles["dialog--opened"]]: props.dialogState
+        [styles[`dialog--${props.dialogColor}`]]: true
       })}
     >
       <div className={styles["dialog__box"]}>
@@ -26,7 +24,7 @@ const Dialog = props => {
         {props.dialogContent}
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Dialog;

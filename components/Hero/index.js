@@ -1,7 +1,5 @@
 import styles from "./Hero.scss";
-import classnames from "classnames";
 import Fade from "react-reveal/Fade";
-import Flip from "react-reveal/Flip";
 const Hero = () => {
   return (
     <section id="domu" className={styles["section__hero"]}>

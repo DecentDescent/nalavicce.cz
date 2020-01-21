@@ -25,6 +25,7 @@ function useKeyboardEvent(key, callback) {
 
 function IndexPage() {
   // Declare a new state variable, which we'll call "count"
+
   const [dialogState, setDialog] = useState(false);
   const [dialogTitle, setTitle] = useState(undefined);
   const [dialogContent, setContent] = useState(undefined);

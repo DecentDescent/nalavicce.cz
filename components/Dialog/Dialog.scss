@@ -8,15 +8,11 @@
   left: 0;
   padding: 16px;
   box-sizing: border-box;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   overflow-y: auto;
   z-index: 999;
-
-  &.dialog--opened {
-    display: flex;
-  }
 
   &.dialog--blue {
     background-color: rgba($color-blue, 0.95);
