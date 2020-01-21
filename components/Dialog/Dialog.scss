@@ -11,6 +11,7 @@
   display: none;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
   z-index: 999;
 
   &.dialog--opened {
@@ -46,6 +47,7 @@
     border-radius: $gutter * 4;
     padding: $gutter * 8 $gutter * 10;
     position: relative;
+    margin: auto;
   }
 
   .box__close {

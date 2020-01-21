@@ -1,6 +1,4 @@
 import React, { Component, useState, useEffect } from "react";
-import classnames from "classnames";
-
 import Head from "../components/Head";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -10,8 +8,6 @@ import Contact from "../components/Contact";
 import Dialog from "../components/Dialog";
 import Team from "../components/Team";
 import Footer from "../components/Footer";
-import styles from "../styles/general.scss";
-import { loadGetInitialProps } from "next/dist/next-server/lib/utils";
 
 function useKeyboardEvent(key, callback) {
   useEffect(() => {
@@ -42,9 +38,16 @@ function IndexPage() {
     setColor(color);
     setTitle(title);
     setContent(content);
-    console.log(dialogTitle);
     setDialog(true);
   };
+
+  useEffect(() => {
+    if (dialogState) {
+      document.body.classList.add("modal--active");
+    } else {
+      document.body.classList.remove("modal--active");
+    }
+  });
 
   return (
     <>
