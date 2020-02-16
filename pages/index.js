@@ -53,13 +53,17 @@ function IndexPage() {
   return (
     <>
       <Head />
-      <Header />
+      <Hero />
+      <About />
+      <Team modalToggle={modalToggle} />
+
+      <Footer />
+      {/* <Header />
       <Hero />
       <About />
       <HowItWorks modalToggle={modalToggle} />
-      <Team modalToggle={modalToggle} />
       <Contact />
-      <Footer />
+       */}
       <Dialog
         dialogClose={() => setDialog(false)}
         dialogState={dialogState}

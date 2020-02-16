@@ -1,145 +1,18 @@
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px;
-  box-sizing: border-box;
-}
-
-section.section {
-  min-height: 100vh;
-  padding: 32px 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-  z-index: 1;
-
-  &.section--autoheight {
-    min-height: auto;
-  }
-}
-
 h1 {
-  font-weight: 700;
   font-size: 24px;
-  color: $color-white;
-  letter-spacing: 1px;
-}
-
-h2 {
   font-weight: 700;
-  font-size: 32px;
-  margin: 24px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  line-height: 1.2;
   color: $color-black;
-}
-h3 {
-  font-weight: 700;
-  font-size: 28px;
-  margin: 24px 0 8px 0;
-  letter-spacing: 0.3px;
-  color: $color-black;
-}
-
-h4 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.3;
-  margin: 0;
-  text-transform: uppercase;
+  line-height: 1.4;
+  margin: 0 auto 16px auto;
+  font-family: $font-primary;
+  color: $color-blue;
   letter-spacing: 1px;
-}
-
-hr {
-  height: 5px;
-  width: 10%;
-  max-width: 60px;
-  border: none;
-  margin: 48px auto;
-
-  &.divider--blue {
-    background-color: $color-blue;
-  }
-
-  &.divider--yellow {
-    background-color: $color-yellow;
-  }
-
-  &.divider--brown {
-    background-color: $color-brown;
-  }
-
-  &.divider--green {
-    background-color: $color-green;
-  }
-
-  &.divider--red {
-    background-color: $color-red;
-  }
-
-  &.divider--compact {
-    margin: 24px auto;
-  }
 }
 
 p {
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 1.4;
-  max-width: 60ch;
-  margin: 0 auto;
+  font-size: 18px;
   color: $color-black;
-
-  &.paragraph--lead {
-    font-size: 19px;
-    line-height: 1.4;
-    font-weight: 400;
-    max-width: 60ch;
-  }
-  &.paragraph--about {
-    font-size: 17px;
-    line-height: 1.4;
-    font-weight: 400;
-    font-style: italic;
-    max-width: 60ch;
-  }
-}
-
-small {
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  opacity: 0.3;
-}
-
-.big {
-  letter-spacing: 1px;
-  font-size: 24px;
-  margin-bottom: 24px;
-  font-weight: bold;
-
-  a {
-    text-decoration: none;
-    color: $color-red;
-  }
-}
-
-.align--center {
-  text-align: center;
-  max-width: 80ch;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 48px;
-}
-
-b,
-strong {
-  font-weight: bold;
+  line-height: 1.3;
+  margin: 0 auto;
+  font-family: $font-primary;
 }

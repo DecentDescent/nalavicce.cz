@@ -1,19 +1,51 @@
 @import "../../styles/general.scss";
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .header {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 32px 48px;
   box-sizing: border-box;
-  position: fixed;
+  position: absolute;
+  top: $gutter * 2;
+  left: $gutter * 2;
+  right: $gutter * 2;
   z-index: 998;
   transition: opacity 1s;
+  border-radius: 8px;
+
   @media (max-width: 950px) {
     padding: 24px;
   }
 
+  &.header--compact {
+    position: fixed;
+    background: radial-gradient(
+      circle,
+      rgba($color-red, 0.8) 0%,
+      rgba($color-red, 1) 100%
+    );
+    padding: 8px 16px;
+    box-shadow: 0 0 0 20px #f1f1f1;
+    animation: fadeIn 1s forwards;
+    backdrop-filter: blur(8px);
+
+    .header__logo {
+      svg {
+        height: 32px;
+      }
+    }
+  }
   &.fadeOut {
     opacity: 0;
   }

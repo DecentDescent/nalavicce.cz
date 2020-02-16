@@ -1,80 +1,81 @@
 @import "../../styles/general.scss";
 
-@keyframes scroll {
-  0%,
-  65%,
-  100% {
-    opacity: 0;
-  }
-  10%,
-  40% {
-    opacity: 1;
-  }
-  0% {
-    transform: translateY(5px) scale(0.7);
-  }
-  5% {
-    transform: scale(0.7);
-  }
-  15%,
-  100% {
-    transform: scale(1);
-  }
-  45%,
-  65% {
-    transform: translateY(16px) scale(0.7);
-  }
-}
-
-.section__hero {
-  min-height: calc(100vh - 16px);
-  border-radius: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.section--hero {
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: $color-white;
   background: radial-gradient(
       circle,
-      rgba($color-red, 0.8) 0%,
-      rgba($color-red, 1) 100%
+      rgba($color-blue, 0.4) 0%,
+      rgba($color-blue, 0.6) 100%
     ),
-    url("/static/hero.jpg");
-  position: relative;
+    url("/static/photos/people.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  display: grid;
+  grid-template-rows: 128px 1fr 128px;
+  align-items: center;
+  justify-items: center;
+  border: 14px solid $color-white;
+  overflow: hidden;
+}
 
-  @media (max-width: 950px) {
-    border-radius: 16px;
+.hero__logo {
+  position: relative;
+  width: 200px;
+}
+
+.hero__content {
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    font-size: 21px;
+    font-family: $font-primary;
+    color: $color-white;
+    font-weight: 700;
   }
 
   svg {
-    height: 40vh;
-    margin: 64px 0;
+    width: 100%;
+    max-width: 360px;
+    margin: 32px 0;
   }
 }
 
-.mouse {
-  width: 25px;
-  height: 40px;
-  border-radius: 15px;
-  border: 2px solid $color-white;
+.hero__more {
   position: absolute;
-  left: calc(50% - 12.5px);
-  bottom: 32px;
+  bottom: 48px;
+  width: 48px;
+  height: 48px;
+  transition: all 0.25s;
+  cursor: pointer;
 
-  &:before,
-  &:after {
-    content: "";
+  span {
     display: block;
-    position: absolute;
+    background: $color-blue;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    transition: all 0.25s;
   }
-  &:before {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    top: 10px;
-    left: calc(50% - 2px);
-    background: $color-white;
-    animation: scroll 3s 5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-12px) translateY(-12px);
+    fill: $color-white;
+    width: 24px;
+  }
+
+  &:hover {
+    bottom: 42px;
+    span {
+      background: lighten($color-blue, 10%);
+    }
   }
 }

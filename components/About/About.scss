@@ -1,13 +1,61 @@
 @import "../../styles/general.scss";
 
-.decoration {
-  position: absolute;
-  width: 120vw;
-  z-index: -1;
-  opacity: 0.4;
-}
+.section--about {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
 
-.main-logo {
-  width: 300px;
-  margin: 0 auto;
+  .about__graphic {
+    z-index: 2;
+    div {
+      width: 52vw;
+      text-align: right;
+
+      img {
+        height: auto;
+        max-height: 80vh;
+        max-width: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  .about__text {
+    min-height: 100vh;
+    height: auto;
+    padding: 48px;
+    background: lighten($color-blue, 45%);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    div {
+      max-width: 40ch;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &.about__text--decorated:before {
+      content: "";
+      position: absolute;
+      width: 25vw;
+      top: 0;
+      left: -25vw;
+      bottom: 0;
+      background: lighten($color-blue, 45%);
+      z-index: -1;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .about__text {
+      background: white;
+    }
+  }
 }

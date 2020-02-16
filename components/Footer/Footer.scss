@@ -1,93 +1,91 @@
 @import "../../styles/general.scss";
 
 .footer {
-  padding: 0;
-  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: $color-white;
   background: radial-gradient(
-    circle,
-    rgba($color-red, 0.9) 0%,
-    rgba($color-red, 1) 100%
-  );
-  border-radius: 24px;
+      circle,
+      rgba($color-blue, 0.8) 0%,
+      rgba($color-blue, 0.9) 100%
+    ),
+    url("/static/photos/footer.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 48px 24px;
+  border: 14px solid $color-white;
+  overflow: hidden;
+}
 
-  .footer__container {
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+nav {
+  padding: 16px;
+  font-family: $font-primary;
+  display: inline-block;
 
-    padding: 48px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-  }
+    justify-content: center;
+    font-size: 15px;
 
-  nav {
-    padding: 16px;
-    font-family: "Hind", sans-serif;
-    display: inline-block;
+    @media (max-width: 640px) {
+      margin-bottom: 24px;
+      flex-direction: column;
+    }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+    li {
+      padding: 10px 5px;
+      margin: 0 15px;
+      position: relative;
 
       @media (max-width: 640px) {
-        margin-bottom: 24px;
-        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+        margin: 10px 15px;
       }
 
-      li {
-        padding: 10px 5px;
-        margin: 0 15px;
-        border-bottom: 3px solid transparent;
-        transition: border-bottom 0.24s;
-        position: relative;
+      &:after {
+        content: "";
+        width: 15px;
+        right: -22px;
+        height: 1px;
+        top: 15px;
+        background: white;
+        border: none;
+        position: absolute;
+        opacity: 0.2;
 
         @media (max-width: 640px) {
-          text-align: center;
-          padding: 5px;
-          margin: 10px 15px;
-        }
-
-        &:after {
-          content: "";
-          width: 15px;
-          right: -22px;
-          height: 1px;
-          top: 15px;
-          background: white;
-          border: none;
-          position: absolute;
-          opacity: 0.2;
-
-          @media (max-width: 640px) {
-            display: none;
-          }
-        }
-
-        &:last-child:after {
           display: none;
         }
+      }
 
-        a {
-          color: #fff;
-          text-decoration: none;
-        }
+      &:last-child:after {
+        display: none;
+      }
 
-        &:hover {
-          border-bottom: 3px solid white;
-        }
+      a {
+        color: #fff;
+        text-decoration: none;
       }
     }
   }
+}
 
-  svg {
-    max-width: 150px;
-    width: 100%;
-    margin: 16px 0 42px 0;
-  }
+small {
+  color: $color-white;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 16px 0;
+  opacity: 0.7;
+  font-family: $font-primary;
 }

@@ -38,7 +38,8 @@
     }
 
     @media (max-width: 750px) {
-      margin: 24px 0;
+      height: 100px;
+      margin: 16px 0;
     }
 
     &:hover {
@@ -46,6 +47,10 @@
       background: rgba($color-blue, 1);
       box-shadow: 0 0 0 8px rgba($color-blue, 0.4),
         0 0 0 16px rgba($color-blue, 0.3);
+    }
+
+    &:nth-child(2) {
+      margin-top: 32px;
     }
   }
 }

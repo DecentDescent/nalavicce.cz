@@ -2,26 +2,21 @@
 @import "variables";
 @import "elements";
 
+body,
+html {
+  height: 100%;
+}
 body {
-  border: 8px solid #f1f1f1;
-  background: #f1f1f1;
   font-family: "Hind";
-
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba($color-blue, 0.3);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $color-red;
-  }
+  overflow-x: hidden;
+  font-size: 19px;
 }
 
 :global {
   body.modal--active {
     overflow: hidden;
+  }
+  #__next {
+    height: 100%;
   }
 }
