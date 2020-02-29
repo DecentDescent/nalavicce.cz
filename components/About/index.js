@@ -17,13 +17,13 @@ const About = () => {
                 hospitalizací. Tato péče probíhá formou terapeutických skupin,
                 jejichž cílem je usnadnit dětem návrat do běžného fungování a
                 podpořit sdílení problémů a těžkostí v bezpečném prostředí mezi
-                vrstevníky. Prozatím se jedná o pilotní projekt, který je veden
-                odborným garantem MUDr. Michalem Považanem, primářem dětského
-                oddělení Psychiatrické nemocnice Bohnice. Naším cílem je
-                vytvořit z tohoto pilotního projektu běžnou posthospitalizační
-                službu, díky které chceme pomoct předejít opakované
-                hospitalizaci adolescentů a zároveň mít možnost včas zachytit
-                případné zhoršení stavu.
+                vrstevníky. Prozatím se jedná o pilotní projekt, který je veden{" "}
+                <strong>odborným garantem MUDr. Michalem Považanem</strong>,
+                primářem dětského oddělení Psychiatrické nemocnice Bohnice.
+                Naším cílem je vytvořit z tohoto pilotního projektu běžnou
+                posthospitalizační službu, díky které chceme pomoct předejít
+                opakované hospitalizaci adolescentů a zároveň mít možnost včas
+                zachytit případné zhoršení stavu.
               </p>
             </div>
           </div>

@@ -2,81 +2,282 @@
 
 .section--team {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-content: center;
   align-items: center;
   box-sizing: border-box;
   justify-content: center;
+  margin: 0;
 
-  .team__container {
-    width: 100%;
-    text-align: center;
-    max-width: 640px;
-    padding: 32px;
-    box-sizing: border-box;
+  @media (max-width: $desktop) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: auto;
   }
 
-  .team__people {
-    width: 100%;
-    max-width: 950px;
-    display: grid;
+  .team__graphic {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    @media (max-width: $desktop) {
+      padding: 64px 0;
+    }
+  }
+
+  .team__text {
+    min-height: 100vh;
+    height: auto;
+    padding: 48px;
+    background: lighten($color-blue, 45%);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
     align-items: center;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background: white;
 
-    .person {
-      position: relative;
-      .person__avatar {
-        width: 156px;
-        height: 156px;
-        background-size: cover;
-        border-radius: 10px;
-        z-index: 1;
-        transition: transform 0.24s;
-        cursor: pointer;
+    @media (max-width: $desktop) {
+      grid-template-rows: 1fr 1fr;
+      min-height: auto;
+    }
 
-        &.dita {
-          background-image: url("/static/photos/dita.png");
-          margin-top: 48px;
-        }
+    div {
+      max-width: 40ch;
 
-        &.honza {
-          background-image: url("/static/photos/honza.png");
-        }
-
-        &.lucka {
-          background-image: url("/static/photos/lucka.png");
-          margin-top: 48px;
-        }
-
-        &.kristyna {
-          background-image: url("/static/photos/kristyna.png");
-        }
-
-        &.martina {
-          background-image: url("/static/photos/martina.png");
-          margin-top: 48px;
-        }
-
-        &:hover {
-          transform: scale(1.1);
-        }
+      @media (min-width: $tv) {
+        max-width: 60ch;
       }
-      h2 {
-        opacity: 0;
-        font-size: 19px;
-        font-family: $font-primary;
-        font-weight: 700;
-        padding: 16px;
-        box-sizing: border-box;
-        position: absolute;
-        color: $color-blue;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
+
+      @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+        max-width: 60ch;
       }
+
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.teammates {
+  display: grid;
+  grid-template-columns: repeat(3, 30px 80px) 30px;
+  grid-template-rows: repeat(6, 70px);
+  column-gap: 24px;
+  row-gap: 20px;
+  box-sizing: border-box;
+
+  @media (max-width: $desktop) {
+    grid-template-columns: repeat(3, 40px 90px) 40px;
+    grid-template-rows: repeat(4, 90px);
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(2, 20px 60px) 20px;
+    grid-template-rows: repeat(6, 55px);
+  }
+}
+
+.teammate {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  -webkit-clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+
+  h3 {
+    opacity: 0;
+    z-index: 998;
+    font-family: $font-primary;
+    font-weight: 700;
+    color: $color-white;
+    transition: all 0.25s;
+    font-size: 17px;
+    margin: 0;
+  }
+
+  &:hover {
+    background: $color-blue;
+    transform: scale(1.1);
+    &:before {
+      opacity: 1;
+    }
+    h3 {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    z-index: 1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    -webkit-clip-path: polygon(
+      25% 0%,
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      25% 100%,
+      0% 50%
+    );
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: all 0.25s;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    -webkit-clip-path: polygon(
+      25% 0%,
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      25% 100%,
+      0% 50%
+    );
+    background-size: cover;
+    background-position: center;
+  }
+
+  &:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: lighten($color-yellow, 25%);
+    &:before {
+      background: radial-gradient(
+        circle,
+        rgba($color-yellow, 0.8) 0%,
+        rgba($color-yellow, 0.9) 100%
+      );
+    }
+    &:after {
+      background-image: url("/static/photos/dita.jpg");
+    }
+  }
+  &:nth-of-type(2) {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background: lighten($color-blue, 25%);
+    &:before {
+      background: radial-gradient(
+        circle,
+        rgba($color-blue, 0.8) 0%,
+        rgba($color-blue, 0.9) 100%
+      );
+    }
+    &:after {
+      background-image: url("/static/photos/honza.jpg");
+    }
+  }
+  &:nth-of-type(3) {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background: lighten($color-red, 35%);
+    &:before {
+      background: radial-gradient(
+        circle,
+        rgba($color-red, 0.8) 0%,
+        rgba($color-red, 0.9) 100%
+      );
+    }
+    &:after {
+      background-image: url("/static/photos/lucka.jpg");
+    }
+    @media (max-width: $desktop) {
+      grid-column-start: 5;
+      grid-column-end: 8;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    @media (max-width: $mobile) {
+      grid-column-start: 3;
+      grid-column-end: 6;
+      grid-row-start: 4;
+      grid-row-end: 6;
+    }
+  }
+  &:nth-of-type(4) {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    background: lighten($color-brown, 35%);
+    &:before {
+      background: radial-gradient(
+        circle,
+        rgba($color-brown, 0.8) 0%,
+        rgba($color-brown, 0.9) 100%
+      );
+    }
+    &:after {
+      background-image: url("/static/photos/kristyna.jpg");
+    }
+    @media (max-width: $desktop) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
+  }
+  &:nth-of-type(5) {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    background: lighten($color-green, 25%);
+    &:before {
+      background: radial-gradient(
+        circle,
+        rgba($color-green, 0.8) 0%,
+        rgba($color-green, 0.9) 100%
+      );
+    }
+    &:after {
+      background-image: url("/static/photos/martina.jpg");
+    }
+    @media (max-width: $desktop) {
+      grid-column-start: 5;
+      grid-column-end: 8;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
+
+    @media (max-width: $mobile) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 5;
+      grid-row-end: 7;
     }
   }
 }

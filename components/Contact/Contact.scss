@@ -1,44 +1,101 @@
 @import "../../styles/general.scss";
 
-.contact {
-  width: 100%;
-  background: rgba($color-yellow, 0.1);
-  box-sizing: border-box;
-}
-
-.contact-box {
-  display: flex;
+.section--about {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
   align-items: center;
-  padding: $gutter * 2 0;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 48px 0 32px 0;
 
-  .box__svg {
-    svg {
-      height: 64px;
-    }
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: auto;
+    margin-bottom: 0;
   }
-  .box__text {
-    padding-left: 24px;
-    font-size: 21px;
-    font-weight: bold;
-    color: $color-black;
 
-    a {
-      text-decoration: none;
-      color: $color-blue;
-      transition: all 0.24s;
+  .about__graphic {
+    z-index: 2;
+    margin-bottom: -4px;
+    div {
+      width: 52vw;
+      text-align: right;
 
-      &:hover {
-        color: rgba($color-blue, 0.8);
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+
+      img {
+        height: auto;
+        max-height: 80vh;
+        max-width: 100%;
+        width: auto;
+
+        @media (max-width: $mobile) {
+          width: 100%;
+          height: auto;
+          min-height: auto;
+          max-width: 100%;
+        }
       }
     }
   }
-}
 
-.contact-map {
-  border-radius: 50px;
-  background: $color-blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $color-white;
+  .about__text {
+    min-height: 100vh;
+    text-align: center;
+    height: auto;
+    padding: 48px;
+    background: lighten($color-blue, 45%);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    a {
+      color: $color-blue;
+      text-decoration: none;
+      transition: all 0.24s;
+      &:hover {
+        color: $color-black;
+      }
+    }
+    @media (max-width: $mobile) {
+      grid-template-rows: 1fr 1fr;
+      min-height: auto;
+    }
+
+    div {
+      max-width: 40ch;
+
+      @media (min-width: $tv) {
+        max-width: 60ch;
+      }
+
+      @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+        max-width: 60ch;
+      }
+
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &.about__text--decorated:before {
+      content: "";
+      position: absolute;
+      width: 25vw;
+      top: 0;
+      left: -25vw;
+      bottom: 0;
+      background: lighten($color-blue, 45%);
+      z-index: -1;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
 }

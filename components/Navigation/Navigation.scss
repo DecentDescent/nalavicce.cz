@@ -1,0 +1,61 @@
+@import "../../styles/general.scss";
+
+.navigation {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  z-index: 999;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin: 8px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $color-blue;
+      position: relative;
+      &:after {
+        display: none;
+      }
+      a {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      &:hover {
+        a {
+          background-color: $color-blue;
+        }
+        .tooltip {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.tooltip {
+  white-space: nowrap;
+  display: none;
+  background: $color-blue;
+  padding: 6px 8px;
+  border-radius: 4px;
+  color: white;
+  font-family: $font-primary;
+  font-size: 16px;
+  position: absolute;
+  right: 28px;
+}

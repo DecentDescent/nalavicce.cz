@@ -1,18 +1,148 @@
 h1 {
+  font-family: $font-primary;
+  font-size: 28px;
+  font-weight: 700;
+  color: $color-black;
+  line-height: 1.2;
+  margin: 0 auto 16px auto;
+  color: $color-blue;
+  letter-spacing: 1px;
+
+  @media (min-width: $tv) {
+    font-size: 48px;
+  }
+
+  @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-family: $font-primary;
   font-size: 24px;
   font-weight: 700;
   color: $color-black;
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0 auto 16px auto;
-  font-family: $font-primary;
   color: $color-blue;
   letter-spacing: 1px;
+
+  @media (min-width: $tv) {
+    font-size: 32px;
+  }
+
+  @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-family: $font-primary;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 42px auto 8px auto;
+  color: $color-blue;
+  letter-spacing: 1px;
+
+  @media (min-width: $tv) {
+    font-size: 28px;
+  }
+
+  @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 19px;
+  }
+}
+
+h4 {
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 28px 0 16px 0;
+  color: $color-black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @media (min-width: $tv) {
+    font-size: 17px;
+  }
+
+  @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+    font-size: 21px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
 }
 
 p {
+  font-family: $font-primary;
   font-size: 18px;
   color: $color-black;
-  line-height: 1.3;
+  line-height: 1.4;
   margin: 0 auto;
+
+  @media (min-width: $tv) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+    font-size: 21px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 17px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
+
+li {
+  font-size: 16px;
   font-family: $font-primary;
+  color: $color-black;
+  line-height: 1.2;
+  margin: 8px auto;
+}
+
+small {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.7;
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: $tv) {
+    font-size: 15px;
+  }
+
+  @media (min-width: $bigscreen) and (max-width: $tv - 1) {
+    font-size: 14px;
+  }
+}
+
+strong {
+  font-weight: 700;
 }

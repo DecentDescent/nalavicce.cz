@@ -4,23 +4,56 @@ const Footer = () => {
   return (
     <section>
       <footer className={styles["footer"]}>
-        <nav>
+        <div className={styles["footer__friends"]}>
+          <h2>Přátelé projektu</h2>
+          <p>
+            <strong>Odborný garant projektu:</strong> MUDr. Michal Považan
+          </p>
+          <p>
+            <strong>Design Lavičky:</strong> Jan Trnka
+          </p>
+          <p>
+            <strong>Webové stránky:</strong> Jan Rádl
+          </p>
+          <p>
+            <strong>Odborný konzultant:</strong> Martin Dulava
+          </p>
+          <p>
+            <strong>Prostor:</strong> Skautský institut, Staroměstské náměstí
+          </p>
+        </div>
+        <nav className={styles["footer__nav"]}>
           <ul>
             <li>
               <a href="#o-projektu">O projektu</a>
             </li>
             <li>
-              <a href="#jak-to-funguje">Jak fungujeme</a>
+              <a href="#jak-to-funguje">Jak to funguje?</a>
             </li>
             <li>
-              <a href="#kdo-sedi-na-lavicce">Náš tým</a>
+              <a href="#nas-tym">Náš tým</a>
             </li>
             <li>
               <a href="#kontakt">Kontakt</a>
             </li>
           </ul>
         </nav>
-        <small>&copy; 2019 – 2020 www.nalavicce.cz</small>
+        <small>
+          <b>&copy; 2019 – 2020 www.nalavicce.cz</b>
+          <br />
+          Fotografie:{" "}
+          <a href="https://unsplash.com/@willpat" target="_blank">
+            Will Paterson
+          </a>
+          ,{" "}
+          <a href="https://unsplash.com/@freestocks" target="_blank">
+            freestocks
+          </a>{" "}
+          &amp;{" "}
+          <a href="https://unsplash.com/@daanstevens" target="_blank">
+            Daan Stevens
+          </a>
+        </small>
       </footer>
     </section>
   );
