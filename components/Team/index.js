@@ -9,15 +9,20 @@ const Team = props => {
         <Fade left>
           <div className={styles["team__text"]}>
             <div>
-              <h1>Kdo sedí na lavičce?</h1>
+              <h1>Kdo sedí na Lavičce?</h1>
 
               <p>
                 Náš projekt je podpořen dětským oddělením PNB a odborným
                 garantem projektu je primář{" "}
-                <strong>MUDr. Michal Považan</strong>. Odborným supervizorem
-                týmu je <strong>Mgr. Jan Kulhánek</strong>, dětský a rodinný
-                psychoterapeut s letitou praxí. Jsme tým mladých terapeutů,
-                kteří studují pátý ročník jednooborové psychologie na{" "}
+                <strong>MUDr. Michal Považan</strong>.
+              </p>
+              <p>
+                Odborným supervizorem týmu je <strong>Mgr. Jan Kulhánek</strong>
+                , dětský a rodinný psychoterapeut s letitou praxí.
+              </p>
+              <p>
+                Jsme tým mladých terapeutů, kteří studují pátý ročník
+                jednooborové psychologie na{" "}
                 <strong>Pražské vysoké škole psychosociálních studií</strong>.
                 Zároveň ukončujeme psychoterapeutické vzdělání a jsme dlouholetí
                 přátelé.
@@ -32,9 +37,9 @@ const Team = props => {
                 className={styles["teammate"]}
                 onClick={() =>
                   props.modalToggle(
+                    "dita_big",
                     "Dita",
                     "yellow",
-                    "dita_big",
                     <>
                       <p>
                         Dita je zakladatelkou a vedoucí projektu. Dita je víla,
@@ -92,9 +97,9 @@ const Team = props => {
                 className={styles["teammate"]}
                 onClick={() =>
                   props.modalToggle(
+                    "honza_big",
                     "Honza",
                     "blue",
-                    "honza_big",
                     <>
                       <p>
                         Honza je jeden z nejvtipnějších lidí, kterého známe.
@@ -164,9 +169,9 @@ const Team = props => {
                 className={styles["teammate"]}
                 onClick={() =>
                   props.modalToggle(
+                    "lucka_big",
                     "Lucka",
                     "red",
-                    "lucka_big",
                     <>
                       <p>
                         Lucka je maminka projektu, dvou dospívajících kluků a
@@ -246,9 +251,9 @@ const Team = props => {
                 className={styles["teammate"]}
                 onClick={() =>
                   props.modalToggle(
+                    "kristyna_big",
                     "Kristýna",
                     "brown",
-                    "kristyna_big",
                     <>
                       <p>
                         Kristýna je skvělá a spolehlivá parťačka, je všude tam,
@@ -298,9 +303,9 @@ const Team = props => {
                 className={styles["teammate"]}
                 onClick={() =>
                   props.modalToggle(
+                    "martina_big",
                     "Martina",
                     "green",
-                    "martina_big",
                     <>
                       <p>
                         Martinka je vřelost sama, srdce na dlani, což je jistě

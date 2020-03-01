@@ -2,14 +2,15 @@ import Head from "next/head";
 
 export default () => (
   <Head>
+    <meta http-equiv="content-language" content="cs-cz" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charSet="utf-8" />
-    <title>Lavička</title>
+    <title>Lavička – Nejsi v tom sám!</title>
     <meta
       name="description"
       content="Projekt Lavička je bezplatná následná psychoterapeutická služba pro adolescentní pacienty, kteří prošli psychiatrickou hospitalizací."
     />
-    <meta property="og:title" content="Lavička" />
+    <meta property="og:title" content="Lavička – Nejsi v tom sám!" />
     <meta
       property="og:description"
       content="Projekt Lavička je bezplatná následná psychoterapeutická služba pro adolescentní pacienty, kteří prošli psychiatrickou hospitalizací."
@@ -42,5 +43,12 @@ export default () => (
     />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preload" href="/static/photos/people.jpg" as="image" />
+    <link rel="preload" href="/static/photos/dita_big.jpg" as="image" />
+    <link rel="preload" href="/static/photos/honza_big.jpg" as="image" />
+    <link rel="preload" href="/static/photos/kristyna_big.jpg" as="image" />
+    <link rel="preload" href="/static/photos/lucka_big.jpg" as="image" />
+    <link rel="preload" href="/static/photos/martina_big.jpg" as="image" />
   </Head>
 );

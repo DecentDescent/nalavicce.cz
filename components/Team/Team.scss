@@ -31,12 +31,16 @@
     min-height: 100vh;
     height: auto;
     padding: 48px;
-    background: lighten($color-blue, 45%);
+    background: lighten($color-yellow, 35%);
     box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
     justify-items: center;
+
+    h1 {
+      color: $color-yellow;
+    }
 
     @media (max-width: $desktop) {
       grid-template-rows: 1fr 1fr;

@@ -9,7 +9,7 @@ const HowItWorks = props => {
         <div className={styles["how__text"]}>
           <div>
             <Fade top>
-              <h1>Jak to na laviččce funguje?</h1>
+              <h1>Jak to na Laviččce funguje?</h1>
             </Fade>
             <Fade left>
               <h3>Kdo se do této služby může přihlásit?</h3>

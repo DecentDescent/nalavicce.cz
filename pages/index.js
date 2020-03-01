@@ -36,11 +36,11 @@ function IndexPage() {
     setDialog(false);
   });
 
-  let modalToggle = function(title, color, photo, content) {
+  let modalToggle = function(photo, title, color, content) {
+    setPhoto(photo);
     setColor(color);
     setTitle(title);
     setContent(content);
-    setPhoto(photo);
     setDialog(true);
   };
 

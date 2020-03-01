@@ -94,8 +94,10 @@ p {
   font-size: 18px;
   color: $color-black;
   line-height: 1.4;
-  margin: 0 auto;
-
+  margin: 16px auto;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
   @media (min-width: $tv) {
     font-size: 22px;
   }

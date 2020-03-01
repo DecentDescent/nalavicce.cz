@@ -49,14 +49,22 @@
     text-align: center;
     height: auto;
     padding: 48px;
-    background: lighten($color-blue, 45%);
+    background: lighten($color-red, 40%);
     box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
     justify-items: center;
+
+    h1 {
+      color: $color-red;
+    }
+    p {
+      text-align: center;
+      hyphens: none;
+    }
     a {
-      color: $color-blue;
+      color: $color-red;
       text-decoration: none;
       transition: all 0.24s;
       &:hover {
@@ -90,7 +98,7 @@
       top: 0;
       left: -25vw;
       bottom: 0;
-      background: lighten($color-blue, 45%);
+      background: lighten($color-red, 40%);
       z-index: -1;
 
       @media (max-width: $mobile) {

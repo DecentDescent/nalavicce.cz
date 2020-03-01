@@ -20,6 +20,12 @@
   padding: 64px 24px 48px 24px;
   border: 14px solid $color-white;
   overflow: hidden;
+
+  p {
+    text-align: center;
+    hyphens: none;
+    max-width: 70ch;
+  }
 }
 
 nav.footer__nav {
@@ -100,10 +106,12 @@ small {
 
   h2 {
     color: $color-white;
+    margin-top: 42px;
   }
 
   p {
     color: $color-white;
     font-size: 15px;
+    margin: 0;
   }
 }

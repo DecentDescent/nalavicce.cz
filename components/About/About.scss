@@ -47,12 +47,16 @@
     min-height: 100vh;
     height: auto;
     padding: 48px;
-    background: lighten($color-blue, 45%);
+    background: lighten($color-brown, 65%);
     box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
     justify-items: center;
+
+    h1 {
+      color: $color-brown;
+    }
 
     @media (max-width: $mobile) {
       grid-template-rows: 1fr 1fr;
@@ -81,7 +85,7 @@
       top: 0;
       left: -25vw;
       bottom: 0;
-      background: lighten($color-blue, 45%);
+      background: lighten($color-brown, 65%);
       z-index: -1;
 
       @media (max-width: $mobile) {
@@ -92,6 +96,9 @@
 
   &:nth-of-type(2) {
     .about__text {
+      h1 {
+        color: $color-blue;
+      }
       background: white;
     }
   }

@@ -23,7 +23,6 @@ const Contact = () => {
             <div>
               <h1>Kontakt</h1>
               <p>Chcete se zeptat? Napište nám na náš informační email</p>
-              <br />
               <p>
                 <strong>
                   <a href="mailto:marcelka@nalavicce.cz">
@@ -31,9 +30,7 @@ const Contact = () => {
                   </a>
                 </strong>
               </p>
-              <br />
               <p>nebo volejte naší imaginární sekretářce Marcelce:</p>
-              <br />
               <p>
                 <strong>(+420) 736 126 447</strong>
               </p>

@@ -5,6 +5,14 @@ const Footer = () => {
     <section>
       <footer className={styles["footer"]}>
         <div className={styles["footer__friends"]}>
+          <p>
+            Jsme bezplatná terapeutická služba. Jak naši terapeuti, tak i lidé,
+            kteří vytvořili tento web či celý design Lavičky pracují zcela
+            zdarma. Stejně tak je tomu i s prostory, momentálně probíhá
+            skupinové setkávání ve Skautském institutu na Staroměstském náměstí.
+            Skautský institut nám poskytuje prostor pro jednu skupinu zdarma po
+            dobu jednoho roku.
+          </p>
           <h2>Přátelé projektu</h2>
           <p>
             <strong>Odborný garant projektu:</strong> MUDr. Michal Považan

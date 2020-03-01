@@ -16,6 +16,14 @@
     justify-items: center;
     text-align: center;
 
+    h1,
+    h3 {
+      color: $color-green;
+    }
+    p {
+      text-align: center;
+      hyphens: none;
+    }
     @media (max-width: $desktop) {
       grid-template-rows: 1fr 1fr;
       min-height: auto;
